@@ -45,4 +45,12 @@ public class PersonRepositoryGateWay implements PersonGateWay {
 				.collect(Collectors.toList());
 	}
 
+
+
+	@Override
+	public Person getById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
