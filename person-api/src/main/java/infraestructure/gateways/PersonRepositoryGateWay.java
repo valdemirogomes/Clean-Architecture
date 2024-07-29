@@ -1,5 +1,8 @@
 package infraestructure.gateways;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.stereotype.Component;
 
 import com.person.api.core.entity.Person;
@@ -28,6 +31,18 @@ public class PersonRepositoryGateWay implements PersonGateWay {
 		PersonEntity newPerson = personRepository.save(entity);
 		return personEntityMapper.toPerson(newPerson);
 		 
+	}
+
+
+
+	@Override
+	public List<Person> getAllPerson() {
+		
+		return personRepository
+				.findAll()
+				.stream()
+				.map(personEntityMapper::toPerson)
+				.collect(Collectors.toList());
 	}
 
 }
