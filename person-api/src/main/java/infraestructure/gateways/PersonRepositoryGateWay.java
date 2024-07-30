@@ -43,14 +43,14 @@ public class PersonRepositoryGateWay implements PersonGateWay {
 				.stream()
 				.map(personEntityMapper::toPerson)
 				.collect(Collectors.toList());
-	}
-
+	} 
 
 
 	@Override
 	public Person getById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+	@SuppressWarnings("deprecation")
+	PersonEntity personEntity =	personRepository.getById(id);
+		return personEntityMapper.toPerson(personEntity);  
 	}
 
 }
