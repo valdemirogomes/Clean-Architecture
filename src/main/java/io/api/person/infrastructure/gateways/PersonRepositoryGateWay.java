@@ -40,7 +40,7 @@ public class PersonRepositoryGateWay implements PersonGateWay {
     }
 
     @Override
-    public Person update(Person person, Long id) {
+    public Person update(Long id, Person person) {
         PersonEntity entity = mapper.toEntity(person);
         PersonEntity newperson = repository.save(entity);
         return mapper.toPerson(newperson);    }

@@ -9,7 +9,7 @@ public interface PersonGateWay {
     Person createPerson(Person person);
     List<Person> getAllPerson();
     Optional<Person> fyndById(Long id);
-    Person update(Person person, Long id);
+    Person update(Long id, Person person);
 
 
 }
