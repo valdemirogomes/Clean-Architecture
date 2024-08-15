@@ -41,7 +41,7 @@ public class PersonController {
         return personDtoMapper.toOptiol(fyndById.execute(id));
 
     }
-    @PutMapping
+    @PutMapping(value="/{id}")
     public PersonDto updatePerson (@PathVariable Long id, @RequestBody PersonDto personDto){
         Person person = personDtoMapper.toPerson(personDto);
         Person newPerson = updatePerson.execute(id,person);

@@ -34,6 +34,7 @@ public class PersonRepositoryGateWay implements PersonGateWay {
 
     @Override
     public Optional<Person> fyndById(Long id) {
+
         Optional<PersonEntity> result = repository.findById(id);
 
         return mapper.toOptional(result);
@@ -41,9 +42,15 @@ public class PersonRepositoryGateWay implements PersonGateWay {
 
     @Override
     public Person update(Long id, Person person) {
+        Optional<PersonEntity> isPresentPerson = repository.findById(id);
+        if (!isPresentPerson.isPresent()){
+            return null;
+              }
+
         PersonEntity entity = mapper.toEntity(person);
+        entity.setId(id);
         PersonEntity newperson = repository.save(entity);
-        return mapper.toPerson(newperson);    }
+        return mapper.toPerson(newperson);                                                                              }
 
 
 }

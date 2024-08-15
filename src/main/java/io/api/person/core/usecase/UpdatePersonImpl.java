@@ -15,7 +15,6 @@ public class UpdatePersonImpl implements UpdatePerson {
 
     @Override
     public Person execute(Long id, Person person) {
-        personGateWay.update(id,person);
-        return null;
+        return personGateWay.update(id,person);
     }
 }
