@@ -52,5 +52,11 @@ public class PersonRepositoryGateWay implements PersonGateWay {
         PersonEntity newperson = repository.save(entity);
         return mapper.toPerson(newperson);                                                                              }
 
+    @Override
+    public void deletePerson(Long id) {
+        repository.deleteById(id);
+
+    }
+
 
 }

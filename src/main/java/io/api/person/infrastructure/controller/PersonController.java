@@ -1,10 +1,7 @@
 package io.api.person.infrastructure.controller;
 
 import io.api.person.core.domain.Person;
-import io.api.person.core.usecase.CreatePerson;
-import io.api.person.core.usecase.FyndById;
-import io.api.person.core.usecase.GetAllPerson;
-import io.api.person.core.usecase.UpdatePerson;
+import io.api.person.core.usecase.*;
 import io.api.person.infrastructure.dto.PersonDto;
 import io.api.person.infrastructure.mapper.Mapper;
 import lombok.AllArgsConstructor;
@@ -21,6 +18,8 @@ public class PersonController {
     private final GetAllPerson getAllPerson;
     private final FyndById fyndById;
     private final UpdatePerson updatePerson;
+    private final DeletePerson deletePerson;
+
     private final Mapper personDtoMapper;
 
 
@@ -47,6 +46,10 @@ public class PersonController {
         Person newPerson = updatePerson.execute(id,person);
         return personDtoMapper.toDto(newPerson);
 
+    }
+    @DeleteMapping
+    public void deletePerson(Long id){
+        deletePerson.execute(id);
     }
 
 }
