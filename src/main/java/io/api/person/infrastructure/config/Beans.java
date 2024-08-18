@@ -11,7 +11,6 @@ public class Beans {
     @Bean
     public CreatePerson createPerson(PersonGateWay personGateWay){
         return new CreatePersonImpl(personGateWay);
-
     }
     @Bean
     public GetAllPerson getAllPerson(PersonGateWay personGateWay){
@@ -20,5 +19,9 @@ public class Beans {
     @Bean
     public FyndById fyndById(PersonGateWay personGateWay){
         return new FyndByIdImpl(personGateWay);
+    }
+    @Bean
+    public DeletePerson deletePerson(PersonGateWay personGateWay){
+        return  new DeletePersonImpl(personGateWay);
     }
 }

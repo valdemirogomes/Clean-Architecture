@@ -53,9 +53,10 @@ public class PersonRepositoryGateWay implements PersonGateWay {
         return mapper.toPerson(newperson);                                                                              }
 
     @Override
-    public void deletePerson(Long id) {
+    public Void deletePerson(Long id) {
         repository.deleteById(id);
 
+        return null;
     }
 
 

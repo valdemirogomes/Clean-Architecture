@@ -10,7 +10,7 @@ public interface PersonGateWay {
     List<Person> getAllPerson();
     Optional<Person> fyndById(Long id);
     Person update(Long id, Person person);
-    void deletePerson(Long id);
+    Void deletePerson(Long id);
 
 
 
