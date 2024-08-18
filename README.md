@@ -1,12 +1,37 @@
-Esse projeto, visa mostrar o funcionamento de uma API REST, utilizando a  Clean Architecture.
-Esta API, é composta pelo cinco metodos CRUD, são eles:
+Esse projeto, visa mostrar o funcionamento de uma API REST utilizando a  Clean Architecture.
+Esta API, é composta pelos cinco metodos **CRUD:**
 
-**POST**	
+*POST*	
 
-**PUT**	
+*PUT*	
 
-**DELETE**
+*DELETE*
 
-**GET ALL**	
+*GET ALL*	
 
-**GET BY ID**	
+*GET BY ID*	
+
+**Tecnologias utilizadas:**
+
+  *Java*  
+
+  *Ecossistema Spring*  
+
+  *Spring JPA*
+
+  *Sprint Web*
+
+  *Clean Architecture*
+
+  *Spring REST*
+
+  *Banco de Dados H2*
+
+  **IDE:**
+  
+  *Intellij-idea*
+
+
+
+
+  
