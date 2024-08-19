@@ -1,7 +1,6 @@
 package io.api.person.core.gateway;
 
 import io.api.person.core.domain.Person;
-
 import java.util.List;
 import java.util.Optional;
 
