@@ -22,6 +22,10 @@ public class Beans {
     }
     @Bean
     public DeletePerson deletePerson(PersonGateWay personGateWay){
-        return  new DeletePersonImpl(personGateWay);
+        return new DeletePersonImpl(personGateWay);
+    }
+    @Bean
+    public UpdatePerson updatePerson (PersonGateWay personGateWay){
+        return new UpdatePersonImpl(personGateWay);
     }
 }

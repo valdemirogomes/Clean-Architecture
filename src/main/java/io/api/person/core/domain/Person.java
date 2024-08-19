@@ -1,6 +1,5 @@
 package io.api.person.core.domain;
 
-import lombok.Setter;
 
 import java.util.Date;
 public record Person(Long id,
@@ -10,4 +9,5 @@ public record Person(Long id,
                      Date birth,
                      String individualRegistration,
                      String nationalIdentityCard) {
+
 }
